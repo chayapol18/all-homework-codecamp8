@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Exercise 1 การเขียน code
+      function pow(x, n) {
+        let result = 1;
+        for (let i = 0; i < n; i++) {
+          result *= x;
+        }
+        return result;
+      }
+      let x = prompt("x?", ""),
+        n = prompt("n?", "");
+      if (n <= 0) {
+        alert(
+          `Power ${n} is not supported, please enter an integer number greater than zero`
+        );
+      } else {
+        alert(pow(x, n));
+      }
+
+      //Exercise 2 การสร้าง object
+      const obj = {
+        name: "student",
+        age: 18,
+        address: "Pathumtani",
+        status: "single",
+        int: 10,
+      };
+
+      //Exercise 3 computed
+      function find(key, value) {}
+
+      //Exercise 4 Object
+      const objEmpty = {};
+      objEmpty.name = "Sonter";
+      objEmpty.surname = "Pakorn";
+      objEmpty.name = "Boy";
+      delete objEmpty.name;
+
+      //4.2
+      function isEmpty(obj) {
+        if (!obj) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+      isEmpty(obj);
+
+      //Exercise 5
+      let user = {
+        name: "John",
+        go: function () {
+          alert(this.name);
+        },
+      }(user.go)(); // alert "John"
+
+      //5.2
+      function makeUser() {
+        return {
+          name: "John",
+          ref: this,
+        };
+      }
+
+      let user = makeUser();
+
+      alert(user.ref.name); // alert ''
+
+      //5.3
+      let calculator = {
+        read: function () {
+          let obj = {};
+          let a = prompts();
+          let b = prompts();
+          obj.valueA = a;
+          obj.valueB = b;
+        },
+      };
+
+      calculator.read();
+      alert(calculator.sum());
+      alert(calculator.mul());
+
+      //5.4
+      let ladder = {
+        step: 0,
+        up() {
+          this.step++;
+        },
+        down() {
+          this.step--;
+        },
+        showStep: function () {
+          // shows the current step
+          alert(this.step);
+        },
+      };
+    </script>
+  </body>
+</html>
