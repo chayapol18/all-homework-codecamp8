@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ex22</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <script>
+      function draw(n) {
+        let sym = "";
 
-        function draw(n) {
-            let sym = '';
-
-            for (let i=1; i<=n; i++) {
-                    for(let j = 1; j <= n; j++) {
-                        if ( j >= i ) {
-                            sym += '*'
-                        } else {
-                            sym += '-';
-                        }
-                    }
-                    for(let j = (n-1); j > 0; j--) {
-                        if ( j >= i ) {
-                            sym += '*'
-                        } else {
-                            sym += '-';
-                        }
-                    }
-                    sym += '\n'
+        for (let i = 1; i <= n; i++) {
+          for (let j = 1; j <= n; j++) {
+            if (j >= i) {
+              sym += "*";
+            } else {
+              sym += "-";
             }
-            console.log(sym)
+          }
+          for (let j = n - 1; j > 0; j--) {
+            if (j >= i) {
+              sym += "*";
+            } else {
+              sym += "-";
+            }
+          }
+          sym += "\n";
         }
+        console.log(sym);
+      }
 
-        draw(3)
-        
+      draw(3);
     </script>
-</body>
+  </body>
 </html>

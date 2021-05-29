@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ex17</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <script>
-        function draw(n) {
-            let sym = '';
-            for (let i=n; i > 0; i--) {
-                    for(let j=1; j<=n; j++) {
-                        if ( j >= i ) {
-                            sym += '*'
-                        } else {
-                            sym += '-';
-                        }
-                    }
-                    sym += '\n'
+      function draw(n) {
+        let sym = "";
+        for (let i = n; i > 0; i--) {
+          for (let j = 1; j <= n; j++) {
+            if (j >= i) {
+              sym += "*";
+            } else {
+              sym += "-";
             }
-            console.log(sym)
+          }
+          sym += "\n";
         }
+        console.log(sym);
+      }
 
-        draw(4)
-        
+      draw(4);
     </script>
-</body>
+  </body>
 </html>
